@@ -1,0 +1,45 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+header {
+  background: #333;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+}
+
+nav ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
