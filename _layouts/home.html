@@ -1,0 +1,16 @@
+---
+layout: default
+title: "Home"
+---
+
+<h2>સ્વાગત છે!</h2>
+<p>મારા લેખો અને વિચારો અહીં વાંચી શકો.</p>
+
+<h3>તાજેતરના લેખો:</h3>
+<ul>
+  {% for post in site.posts limit:5 %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a> - {{ post.date | date: "%d %b, %Y" }}</li>
+  {% endfor %}
+</ul>
+
+<a href="blog.html">વધુ વાંચો...</a>
