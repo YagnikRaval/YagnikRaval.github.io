@@ -1,0 +1,8 @@
+title: "યાજ્ઞિક રાવલનો બ્લોગ"
+author: "યાજ્ઞિક રાવલ"
+description: "મારા વિચારો અને રચનાઓ"
+baseurl: "" 
+url: "https://your-username.github.io" 
+theme: minima
+paginate: 5
+paginate_path: "/blog/page:num/"
