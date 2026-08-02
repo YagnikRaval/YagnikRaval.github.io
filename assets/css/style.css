@@ -26,4 +26,6 @@ footer.site-footer{padding:1.25rem; text-align:center; color:var(--muted); borde
 .intro h1{font-family:Merriweather, serif; font-size:2.25rem; margin:0}
 .subtitle{color:var(--muted)}
 .pagination{display:flex; justify-content:space-between; align-items:center; padding:1rem 0}
+.header-actions{margin-left:auto}
+.site-search{padding:0.4rem 0.6rem; border:1px solid #ddd; border-radius:6px}
 @media (max-width:640px){.header-inner{flex-direction:column; align-items:flex-start}.site-nav{margin-left:0}}
