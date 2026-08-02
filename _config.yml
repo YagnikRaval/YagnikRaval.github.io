@@ -2,7 +2,7 @@ title: "Yagnik Raval"
 email: "you@example.com"
 description: "Writer and poet"
 baseurl: "" # do not include a trailing slash
-url: ""
+url: "https://yagnikraval.github.io"
 permalink: /:year/:month/:day/:title/
 markdown: kramdown
 paginate: 6
