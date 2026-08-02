@@ -5,16 +5,25 @@ baseurl: "" # do not include a trailing slash
 url: "https://yagnikraval.github.io"
 permalink: /:year/:month/:day/:title/
 markdown: kramdown
-paginate: 6
+# paginate removed to avoid requiring jekyll-paginate plugin
 # No theme — we use custom layouts in the repository
 
-# Navigation (used in header)
+# Navigation (use .html links since pages are standalone HTML)
 navigation:
   - title: "Home"
     url: "/"
   - title: "About"
-    url: "/about/"
+    url: "/about.html"
   - title: "Posts"
     url: "/"
   - title: "Contact"
-    url: "/contact/"
+    url: "/contact.html"
+
+# Exclude files that shouldn't be processed by Jekyll
+exclude:
+  - README.md
+  - posts.json
+  - feed.xml
+
+# Ensure no plugins are required for the Pages build
+plugins: []
