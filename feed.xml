@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
 ---
 layout: none
 permalink: /feed.xml
 ---
+<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
     <title>{{ site.title }}</title>
-    <link>{{ site.url | default: site.github.url | default: "https://" | append: site.github.owner_name | append: ".github.io/" }}</link>
+    <link>{{ site.url | default: "https://" | append: site.github.owner_name | append: ".github.io/" }}</link>
     <description>{{ site.description }}</description>
     {% for post in site.posts limit: 20 %}
     <item>
