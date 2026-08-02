@@ -6,6 +6,8 @@
   <meta name="theme-color" content="#ffffff">
   <title>Yagnik Raval — Writer & Poet</title>
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <!-- Font Awesome latest -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="/assets/styles.css">
   <meta name="description" content="Poems, essays and writing by Yagnik Raval.">
   <meta property="og:title" content="Yagnik Raval — Writer & Poet">
@@ -22,13 +24,21 @@
         </div>
       </div>
       <nav class="primary">
-        <a href="/">Home</a>
-        <a href="/about.html">About</a>
-        <a href="/posts/demo-post.html">Demo Post</a>
-        <a href="/contact.html">Contact</a>
-        <span class="theme-toggle" style="margin-left:.5rem">
-          <button class="switch btn" onclick="toggleTheme()" aria-label="Toggle theme"><span class="knob"></span></button>
-        </span>
+        <button class="nav-toggle" data-nav-toggle aria-label="Open menu"><i class="fas fa-bars bars"></i></button>
+        <div class="nav-links">
+          <a href="/">Home</a>
+          <a href="/about.html">About</a>
+          <a href="/posts/demo-post.html">Demo Post</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+        <div style="display:flex;gap:.5rem;align-items:center">
+          <div class="social-links" style="display:flex;gap:.4rem">
+            <a class="social-icon" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a class="social-icon" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a class="social-icon" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </div>
+          <button class="switch" onclick="toggleTheme()" aria-label="Toggle theme"><span class="knob"></span></button>
+        </div>
       </nav>
     </header>
 
@@ -56,9 +66,9 @@
             <h2>Follow</h2>
             <p class="meta">Find me on:</p>
             <div style="display:flex;gap:.5rem;margin-top:.5rem">
-              <a class="btn" href="https://twitter.com/" target="_blank">Twitter</a>
-              <a class="btn" href="https://www.instagram.com/" target="_blank">Instagram</a>
-              <a class="btn" href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+              <a class="btn" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i>&nbsp;Twitter</a>
+              <a class="btn" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i>&nbsp;Instagram</a>
+              <a class="btn" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i>&nbsp;LinkedIn</a>
             </div>
           </div>
         </div>

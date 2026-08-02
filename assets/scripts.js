@@ -1,8 +1,8 @@
-// scripts: dark mode, share buttons, misc
+// scripts: dark mode, share buttons, mobile nav, misc
 (function(){
   const root = document.documentElement;
   const stored = localStorage.getItem('theme');
-  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  // Default to light theme unless user previously chose dark
   function applyTheme(theme){
     if(theme==='dark'){
       document.documentElement.setAttribute('data-theme','dark');
@@ -12,12 +12,17 @@
       document.querySelector('meta[name="theme-color"]')?.setAttribute('content','#ffffff');
     }
   }
-  applyTheme(stored || (prefersDark? 'dark':'light'));
+  applyTheme(stored || 'light');
   window.toggleTheme = function(){
     const current = document.documentElement.getAttribute('data-theme')==='dark'?'dark':'light';
     const next = current==='dark'?'light':'dark';
     applyTheme(next);
     localStorage.setItem('theme',next);
+  }
+
+  // Mobile nav toggle
+  window.toggleNav = function(){
+    document.body.classList.toggle('nav-open');
   }
 
   // Sharing helper
@@ -44,5 +49,9 @@
         shareTo(platform,{text});
       });
     });
+
+    // nav toggle button hookup
+    const navToggle = document.querySelector('[data-nav-toggle]');
+    if(navToggle){navToggle.addEventListener('click', toggleNav)}
   });
 })();
