@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Yagnik Raval</title>
+  <title>About — Yagnik Raval</title>
   <style>
     :root{--max-width:900px}
     body{font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;line-height:1.6;color:#111;margin:0;padding:0;background:#fff}
@@ -13,8 +13,6 @@
     a{color:#0b5fff;text-decoration:none}
     .intro h1{margin:.25rem 0}
     .subtitle{color:#555}
-    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem}
-    .card{border:1px solid #efefef;padding:1rem;border-radius:6px;background:#fafafa}
     footer{border-top:1px solid #eee;margin-top:2rem;padding:.75rem 0;text-align:center;color:#666}
   </style>
 </head>
@@ -30,26 +28,15 @@
 
     <main>
       <section class="intro">
-        <h1>Yagnik Raval</h1>
-        <p class="subtitle">Writer and poet</p>
-        <p>Welcome — this is a place for poems, short essays, and writing projects. New posts appear below. To add posts, create markdown files inside the <code>_posts/</code> folder.</p>
-      </section>
+        <h1>About</h1>
+        <p>Hi — I'm Yagnik. I'm a writer and poet. This site hosts my poems, essays, and creative experiments.</p>
 
-      <section class="cards">
-        <article class="card">
-          <h3>Recent posts</h3>
-          <p>No posts yet — add files in <code>_posts/</code> using the filename format <code>YYYY-MM-DD-your-title.md</code>.</p>
-        </article>
-
-        <article class="card">
-          <h3>About</h3>
-          <p><a href="/about.html">Learn more about me</a></p>
-        </article>
-
-        <article class="card">
-          <h3>Contact</h3>
-          <p><a href="/contact.html">Get in touch</a></p>
-        </article>
+        <h2>How to add posts</h2>
+        <ol>
+          <li>Create a new markdown file in <code>_posts/</code> named <code>YYYY-MM-DD-your-title.md</code>.</li>
+          <li>Start the file with YAML front matter (see sample post in <code>_posts/</code>).</li>
+          <li>Push it to this repository — GitHub Pages will build the site automatically.</li>
+        </ol>
       </section>
     </main>
 
