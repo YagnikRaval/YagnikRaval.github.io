@@ -1,0 +1,20 @@
+title: "Yagnik Raval"
+email: "you@example.com"
+description: "Writer and poet"
+baseurl: "" # do not include a trailing slash
+url: ""
+permalink: /:year/:month/:day/:title/
+markdown: kramdown
+paginate: 6
+# No theme — we use custom layouts in the repository
+
+# Navigation (used in header)
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "About"
+    url: "/about/"
+  - title: "Posts"
+    url: "/"
+  - title: "Contact"
+    url: "/contact/"
