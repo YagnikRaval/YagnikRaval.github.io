@@ -3,62 +3,36 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
   <title>Contact — Yagnik Raval</title>
-  <style>
-    :root{--max-width:900px}
-    body{font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;line-height:1.6;color:#111;margin:0;padding:0;background:#fff}
-    .container{max-width:var(--max-width);margin:0 auto;padding:1.25rem}
-    header{border-bottom:1px solid #eee;padding:.75rem 0}
-    nav{display:flex;gap:1rem}
-    a{color:#0b5fff;text-decoration:none}
-    label{display:block;margin-bottom:.5rem}
-    input,textarea{width:100%;max-width:480px;padding:.5rem;border:1px solid #ddd;border-radius:4px}
-    button{background:#0b5fff;color:#fff;border:none;padding:.5rem 1rem;border-radius:4px}
-    footer{border-top:1px solid #eee;margin-top:2rem;padding:.75rem 0;text-align:center;color:#666}
-  </style>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/styles.css">
 </head>
 <body>
   <div class="container">
-    <header>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/about.html">About</a>
-        <a href="/contact.html">Contact</a>
-      </nav>
+    <header class="site-header">
+      <div class="brand"><div class="logo">YR</div><div><div style="font-weight:700">Yagnik Raval</div><div style="font-size:.85rem;color:var(--muted)">Writer & Poet</div></div></div>
+      <nav class="primary"><a href="/">Home</a><a href="/about.html">About</a><a href="/posts/demo-post.html">Demo Post</a><a href="/contact.html">Contact</a><button class="switch btn" onclick="toggleTheme()"><span class="knob"></span></button></nav>
     </header>
 
     <main>
-      <section>
+      <section class="card post-article">
         <h1>Contact</h1>
-        <p>You can reach me by email: <a href="mailto:you@example.com">you@example.com</a></p>
+        <p class="meta">I'd love to hear from editors, readers, and other writers. Use the form below or email directly.</p>
 
-        <h2>Send a message</h2>
-        <p>To receive messages via a contact form, sign up at Formspree (https://formspree.io/) and replace <code>YOUR_FORMSPREE_ID</code> in the form below with your Formspree form ID.</p>
-
-        <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-          <label>
-            Your name<br>
-            <input type="text" name="name" required>
-          </label>
-          <label>
-            Your email<br>
-            <input type="email" name="email" required>
-          </label>
-          <label>
-            Message<br>
-            <textarea name="message" rows="6" required></textarea>
-          </label>
-          <br>
-          <button type="submit">Send</button>
+        <form action="#" onsubmit="alert('Demo: replace with Formspree or backend') ; return false;">
+          <label style="display:block;margin-bottom:.5rem">Your name<br><input required style="padding:.5rem;width:100%;max-width:520px;border:1px solid rgba(0,0,0,0.06);border-radius:8px" type="text" name="name"></label>
+          <label style="display:block;margin-bottom:.5rem">Your email<br><input required style="padding:.5rem;width:100%;max-width:520px;border:1px solid rgba(0,0,0,0.06);border-radius:8px" type="email" name="email"></label>
+          <label style="display:block;margin-bottom:.5rem">Message<br><textarea required style="padding:.5rem;width:100%;max-width:520px;border:1px solid rgba(0,0,0,0.06);border-radius:8px" name="message" rows="6"></textarea></label>
+          <button class="btn">Send message</button>
         </form>
 
-        <p>If you prefer, you can also email directly: <a href="mailto:you@example.com">you@example.com</a></p>
+        <p style="margin-top:1rem;color:var(--muted)">Or email directly: <a href="mailto:you@example.com">you@example.com</a></p>
       </section>
     </main>
 
-    <footer>
-      <p>&copy; Yagnik Raval</p>
-    </footer>
+    <footer class="footer">© Yagnik Raval</footer>
   </div>
+  <script src="/assets/scripts.js"></script>
 </body>
 </html>

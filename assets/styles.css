@@ -1,0 +1,60 @@
+/* Main stylesheet: colorful writer/poet theme with dark mode */
+:root{
+  --bg:#fff;
+  --text:#111;
+  --muted:#666;
+  --accent:#c065ff; /* violet accent */
+  --accent-2:#ff6b6b; /* coral */
+  --card:#fbf7ff;
+  --glass: rgba(255,255,255,0.6);
+  --max-width:980px;
+}
+[data-theme="dark"]{
+  --bg:#0b0b10;
+  --text:#e6e6e9;
+  --muted:#a8a8b3;
+  --accent:#7b5cff;
+  --accent-2:#ff8b8b;
+  --card:#0f0d13;
+  --glass: rgba(255,255,255,0.04);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;line-height:1.6}
+.container{max-width:var(--max-width);margin:0 auto;padding:1.25rem}
+.site-header{display:flex;align-items:center;justify-content:space-between;padding:.75rem 0}
+.brand{display:flex;align-items:center;gap:.75rem}
+.brand .logo{width:46px;height:46px;border-radius:8px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:white;font-weight:700}
+nav.primary{display:flex;gap:.75rem;align-items:center}
+nav.primary a{color:var(--text);text-decoration:none;padding:.35rem .6rem;border-radius:6px}
+nav.primary a:hover{background:var(--glass)}
+.btn{background:linear-gradient(90deg,var(--accent),var(--accent-2));border:none;color:#fff;padding:.5rem .8rem;border-radius:8px;cursor:pointer}
+.hero{display:grid;grid-template-columns:1fr;gap:1rem;padding:3rem 0}
+.hero h1{font-size:2.25rem;margin:.25rem 0}
+.hero p.lead{color:var(--muted);font-size:1.05rem}
+.grid{display:grid;grid-template-columns:2fr 1fr;gap:1.25rem}
+.card{background:var(--card);padding:1rem;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+.post-list{list-style:none;padding:0;margin:0;display:grid;gap:.75rem}
+.post-item{display:block;padding:.75rem;border-radius:8px;background:linear-gradient(180deg,transparent,transparent);border:1px solid rgba(0,0,0,0.04)}
+.post-item h3{margin:.1rem 0}
+.meta{color:var(--muted);font-size:.9rem}
+.tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.5rem}
+.tag{background:transparent;padding:.25rem .45rem;border-radius:6px;border:1px solid rgba(0,0,0,0.06);font-size:.8rem;color:var(--muted)}
+.footer{margin-top:2rem;padding:1rem 0;text-align:center;color:var(--muted);font-size:.9rem}
+/* post styles */
+.post-article{max-width:720px;margin:0 auto;padding:1rem}
+.post-article h1{font-size:2rem;margin-bottom:.25rem}
+.post-meta{color:var(--muted);font-size:.95rem;margin-bottom:1rem;display:flex;gap:1rem;align-items:center}
+.post-content p{margin:.75rem 0}
+.share-buttons{display:flex;gap:.5rem;margin-top:1rem}
+.share-buttons button{background:transparent;border:1px solid rgba(0,0,0,0.08);padding:.45rem .6rem;border-radius:8px;cursor:pointer}
+/* dark mode toggle */
+.theme-toggle{display:inline-flex;align-items:center;gap:.5rem}
+.switch{width:44px;height:24px;background:rgba(0,0,0,0.08);border-radius:999px;position:relative}
+.knob{width:18px;height:18px;background:#fff;border-radius:50%;position:absolute;left:3px;top:3px;transition:all .2s}
+[data-theme="dark"] .switch{background:rgba(255,255,255,0.08)}
+[data-theme="dark"] .knob{left:23px}
+/* responsive */
+@media (max-width:880px){.grid{grid-template-columns:1fr}.hero{padding:2rem 0}.brand .logo{width:40px;height:40px}}
+/* decorations */
+.hr{height:1px;background:linear-gradient(90deg,transparent,rgba(0,0,0,0.06),transparent);margin:1rem 0;border-radius:6px}

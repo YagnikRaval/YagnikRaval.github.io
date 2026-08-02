@@ -3,46 +3,34 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
   <title>About — Yagnik Raval</title>
-  <style>
-    :root{--max-width:900px}
-    body{font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;line-height:1.6;color:#111;margin:0;padding:0;background:#fff}
-    .container{max-width:var(--max-width);margin:0 auto;padding:1.25rem}
-    header{border-bottom:1px solid #eee;padding:.75rem 0}
-    nav{display:flex;gap:1rem}
-    a{color:#0b5fff;text-decoration:none}
-    .intro h1{margin:.25rem 0}
-    .subtitle{color:#555}
-    footer{border-top:1px solid #eee;margin-top:2rem;padding:.75rem 0;text-align:center;color:#666}
-  </style>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/styles.css">
 </head>
 <body>
   <div class="container">
-    <header>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/about.html">About</a>
-        <a href="/contact.html">Contact</a>
-      </nav>
+    <header class="site-header">
+      <div class="brand"><div class="logo">YR</div><div><div style="font-weight:700">Yagnik Raval</div><div style="font-size:.85rem;color:var(--muted)">Writer & Poet</div></div></div>
+      <nav class="primary"><a href="/">Home</a><a href="/about.html">About</a><a href="/posts/demo-post.html">Demo Post</a><a href="/contact.html">Contact</a><button class="switch btn" onclick="toggleTheme()"><span class="knob"></span></button></nav>
     </header>
 
     <main>
-      <section class="intro">
+      <section class="card post-article">
         <h1>About</h1>
-        <p>Hi — I'm Yagnik. I'm a writer and poet. This site hosts my poems, essays, and creative experiments.</p>
+        <p class="meta">I write short poems and essays that look at memory, place, and small domestic wonders. This site hosts experiments and short pieces.</p>
 
-        <h2>How to add posts</h2>
+        <h2>How to read and contribute</h2>
         <ol>
-          <li>Create a new markdown file in <code>_posts/</code> named <code>YYYY-MM-DD-your-title.md</code>.</li>
-          <li>Start the file with YAML front matter (see sample post in <code>_posts/</code>).</li>
-          <li>Push it to this repository — GitHub Pages will build the site automatically.</li>
+          <li>Read posts — click any demo post from the Home page.</li>
+          <li>To add posts: in a Jekyll site you'd add files in <code>_posts/</code>. For now, use standalone HTML files in <code>/posts/</code>.</li>
+          <li>Contact me via the contact page to suggest collaborations.</li>
         </ol>
       </section>
     </main>
 
-    <footer>
-      <p>&copy; Yagnik Raval</p>
-    </footer>
+    <footer class="footer">© Yagnik Raval</footer>
   </div>
+  <script src="/assets/scripts.js"></script>
 </body>
 </html>

@@ -3,60 +3,91 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Yagnik Raval</title>
-  <!-- Rebuilt to trigger GitHub Pages rebuild -->
-  <style>
-    :root{--max-width:900px}
-    body{font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;line-height:1.6;color:#111;margin:0;padding:0;background:#fff}
-    .container{max-width:var(--max-width);margin:0 auto;padding:1.25rem}
-    header{border-bottom:1px solid #eee;padding:.75rem 0}
-    nav{display:flex;gap:1rem}
-    a{color:#0b5fff;text-decoration:none}
-    .intro h1{margin:.25rem 0}
-    .subtitle{color:#555}
-    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem}
-    .card{border:1px solid #efefef;padding:1rem;border-radius:6px;background:#fafafa}
-    footer{border-top:1px solid #eee;margin-top:2rem;padding:.75rem 0;text-align:center;color:#666}
-  </style>
+  <meta name="theme-color" content="#ffffff">
+  <title>Yagnik Raval — Writer & Poet</title>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <meta name="description" content="Poems, essays and writing by Yagnik Raval.">
+  <meta property="og:title" content="Yagnik Raval — Writer & Poet">
+  <meta property="og:description" content="Poems, essays and writing by Yagnik Raval.">
 </head>
 <body>
   <div class="container">
-    <header>
-      <nav>
+    <header class="site-header">
+      <div class="brand">
+        <div class="logo">YR</div>
+        <div>
+          <div style="font-weight:700">Yagnik Raval</div>
+          <div style="font-size:.85rem;color:var(--muted)">Writer & Poet</div>
+        </div>
+      </div>
+      <nav class="primary">
         <a href="/">Home</a>
         <a href="/about.html">About</a>
+        <a href="/posts/demo-post.html">Demo Post</a>
         <a href="/contact.html">Contact</a>
+        <span class="theme-toggle" style="margin-left:.5rem">
+          <button class="switch btn" onclick="toggleTheme()" aria-label="Toggle theme"><span class="knob"></span></button>
+        </span>
       </nav>
     </header>
 
     <main>
-      <section class="intro">
-        <h1>Yagnik Raval</h1>
-        <p class="subtitle">Writer and poet</p>
-        <p>Welcome — this is a place for poems, short essays, and writing projects. New posts appear below. To add posts, create markdown files inside the <code>_posts/</code> folder.</p>
+      <section class="hero">
+        <h1>Poems, essays, and short experiments</h1>
+        <p class="lead">I write short pieces about memory, language, and the small wild things of everyday life. Welcome — explore a demo post or reach out.</p>
       </section>
 
-      <section class="cards">
-        <article class="card">
-          <h3>Recent posts</h3>
-          <p>No posts yet — add files in <code>_posts/</code> using the filename format <code>YYYY-MM-DD-your-title.md</code>.</p>
-        </article>
+      <div class="grid">
+        <div>
+          <div class="card">
+            <h2>Recent posts</h2>
+            <ul class="post-list">
+              <li class="post-item">
+                <h3><a href="/posts/demo-post.html">A Small Note on Nightingales</a></h3>
+                <div class="meta">Aug 2, 2026 · <span style="color:var(--muted)">Reading: 2 min</span></div>
+                <p class="excerpt">A short, experimental poem about night sounds and the thin light between trains. Click to read the demo post.</p>
+                <div class="tags"><span class="tag">poem</span><span class="tag">flash</span></div>
+              </li>
+            </ul>
+          </div>
 
-        <article class="card">
-          <h3>About</h3>
-          <p><a href="/about.html">Learn more about me</a></p>
-        </article>
+          <div class="card" style="margin-top:1rem">
+            <h2>Follow</h2>
+            <p class="meta">Find me on:</p>
+            <div style="display:flex;gap:.5rem;margin-top:.5rem">
+              <a class="btn" href="https://twitter.com/" target="_blank">Twitter</a>
+              <a class="btn" href="https://www.instagram.com/" target="_blank">Instagram</a>
+              <a class="btn" href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+            </div>
+          </div>
+        </div>
 
-        <article class="card">
-          <h3>Contact</h3>
-          <p><a href="/contact.html">Get in touch</a></p>
-        </article>
-      </section>
+        <aside>
+          <div class="card">
+            <h3>About</h3>
+            <p class="meta">Writer and poet. I work with short forms and experiments in language.</p>
+            <a href="/about.html" class="btn" style="margin-top:.5rem;display:inline-block">Learn more</a>
+          </div>
+
+          <div class="card" style="margin-top:1rem">
+            <h3>Newsletter</h3>
+            <p class="meta">Subscribe for occasional notes and poems.</p>
+            <form action="#" onsubmit="alert('Subscribe demo — replace with Mailchimp/Form backend') ; return false;">
+              <input type="email" placeholder="your@email.com" required style="padding:.5rem;width:100%;max-width:260px;border:1px solid rgba(0,0,0,0.06);border-radius:8px">
+              <div style="height:.5rem"></div>
+              <button class="btn">Subscribe</button>
+            </form>
+          </div>
+        </aside>
+      </div>
+
     </main>
 
-    <footer>
-      <p>&copy; Yagnik Raval</p>
+    <footer class="footer">
+      <div>© Yagnik Raval · Built with ❤️ · <a href="https://github.com/YagnikRaval/YagnikRaval.github.io" target="_blank">Source</a></div>
     </footer>
   </div>
+  <script src="/assets/scripts.js"></script>
 </body>
 </html>
